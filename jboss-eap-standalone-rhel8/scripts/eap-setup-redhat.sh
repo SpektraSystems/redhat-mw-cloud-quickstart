@@ -14,6 +14,7 @@ EAP_PASSWORD=$3
 RHSM_USER=$4
 RHSM_PASSWORD=$5
 export RHSM_POOL=$6
+PIP=$7
 
 PROFILE=standalone 
 echo "EAP admin user"+${EAP_USER} >> /home/$1/install.progress.txt
@@ -28,6 +29,13 @@ subscription-manager repos --enable=jb-eap-7.2-for-rhel-8-x86_64-rpms >> /home/$
 
 echo "Installing EAP7.2 repos" >> /home/$1/install.progress.txt
 yum groupinstall -y jboss-eap7 >> /home/$1/install.out.txt 2>&1
+
+echo "update Public IP in JBOSS Config File"
+sed -i 's/jboss.bind.address.management:127.0.0.1/jboss.bind.address.management:$PIP/g'  $EAP_HOME/standalone/configuration/standalone-full.xml
+sed -i 's/jboss.bind.address:127.0.0.1/jboss.bind.address:$PIP/g'  $EAP_HOME/standalone/configuration/standalone-full.xml
+#sed -i 's/jboss.bind.address.private:127.0.0.1/jboss.bind.address.private:0.0.0.0/g'  $EAP_HOME/standalone/configuration/standalone-full.xml
+
+
 
 echo "Enabling EAP7.2 service" >> /home/$1/install.progress.txt
 systemctl enable eap7-standalone.service
