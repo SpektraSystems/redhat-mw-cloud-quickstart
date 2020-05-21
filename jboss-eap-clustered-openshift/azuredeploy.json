@@ -6,7 +6,7 @@
       "type": "string",
       "minLength": 1,
       "metadata": {
-        "description": "User name for the Virtual Machine and OpenShift Webconsole."
+        "description": "User name for the Viasdfasdfrtual Machine and OpenShift Webconsole."
       }
     },
     "openshiftPassword": {
