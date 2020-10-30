@@ -7,7 +7,7 @@ ms.topic: quickstart
 ms.service: virtual-machines-linux
 ms.subservice: workloads
 ms.assetid: 8a4df7bf-be49-4198-800e-db381cda98f5
-ms.date: 10/28/2020
+ms.date: 10/30/2020
 ---
 
 # Deploy enterprise Java applications to Azure with JBoss EAP on Red Hat Enterprise Linux
@@ -24,12 +24,12 @@ These Quickstart templates will show you how to deploy [JBoss EAP](https://www.r
 
 * RHEL options - Choose between Pay-As-You-Go (PAYG) or Bring-Your-Own-Subscription (BYOS). For BYOS, you will need to activate your [Red Hat Cloud Access](https://access.redhat.com/) RHEL Gold Image before you deploy the Quickstart template.
 
-## JBoss EAP use case
+## Java EE / Jakarata EE Application Migration
 
 ### Migrate to JBoss EAP
 JBoss EAP 7.2 and 7.3 are certified implementations of the Java Enterprise Edition (Java EE) 8 and Jakarta EE 8 specifications. JBoss EAP provides preconfigured options for features such as high-availability (HA) clustering, messaging, and distributed caching. It also enables users to write, deploy, and run applications using the various APIs and services that JBoss EAP provides.  For additional information on JBoss EAP, visit [Introduction to JBoss EAP 7.2](https://access.redhat.com/documentation/en/red_hat_jboss_enterprise_application_platform/7.2/html-single/introduction_to_jboss_eap/index) or [Introduction to JBoss EAP 7.3](https://access.redhat.com/documentation/en/red_hat_jboss_enterprise_application_platform/7.3/html/introduction_to_jboss_eap/index).
 
- #### Applications on JBoss EAP:
+ #### Applications on JBoss EAP
 
 * Web Services Applications - Web services provide a standard means of interoperating among different software applications. Each application can run on different platforms and frameworks. These web services facilitate internal, heterogeneous subsystem communication. To learn more, visit [Developing Web Services Applications on EAP 7.2](https://access.redhat.com/documentation/en/red_hat_jboss_enterprise_application_platform/7.2/html/developing_web_services_applications/index) or [Developing Web Services Applications on EAP 7.3](https://access.redhat.com/documentation/en/red_hat_jboss_enterprise_application_platform/7.3/html/developing_web_services_applications/index).
 
